@@ -1,0 +1,29 @@
+
+spring:
+   profiles:
+      active: movie
+---
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+  config:
+    activate:
+      on-profile: movie
+  application:
+    name: movie
+  datasource:
+      url: jdbc:postgresql://localhost:5432/Movie
+      username: postgres
+      password: 123456
+      driverClassName: org.postgresql.Driver
+  jpa: 
+      database: postgresql
+      hibernate: 
+         dialect: org.hibernate.dialect.PostgreSQL10Dialect
+         ddl-auto: update
+server:
+  port: 8081
+  maxHttpHeaderSize: 100000
+---

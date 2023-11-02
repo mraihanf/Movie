@@ -17,7 +17,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "label")
+@Table(name = "Movie")
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Getter
 @Setter
